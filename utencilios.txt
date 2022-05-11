@@ -1,0 +1,62 @@
+------------------------
+>>>>> guardar imagens en linea para utilizarlas
+------------------------
+https://postimg.cc/YvFt2dt9
+
+
+------------------------
+>>>>> sass for css
+------------------------
+https://sass-lang.com/documentation/variables
+
+
+
+------------------------
+>>>>> alertas 
+------------------------
+https://sweetalert2.github.io/
+
+
+
+------------------------
+>>>>>colores
+------------------------
+https://htmlcolorcodes.com/es/
+------------------------
+>>>>>colores gradients
+------------------------
+https://htmlcolorcodes.com/es/
+------------------------
+>>>>>colores paleta
+------------------------
+https://htmlcolorcodes.com/es/
+
+
+
+
+
+
+------------------------
+>>>>>generated of sombras(shawdows)
+------------------------
+
+https://www.cssmatic.com/es/box-shadow
+
+
+
+------------------------
+>>>>>fonts --letters
+------------------------
+https://fonts.google.com/?standard-styles=&preview.text=hola%20este%20es%20mi%20nombre&preview.text_type=custom
+
+
+------------------------
+>>>>>imagenes png
+------------------------
+https://www.freepng.es/hd-png/pincel.html
+
+
+------------------------
+>>>>>iconos
+------------------------
+https://fontawesome.com/v5.15/icons/pen-alt?style=solid

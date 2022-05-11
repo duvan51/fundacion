@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--esto es un framwork para el carrusel-history css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="import" href="/layouts/alert.html">
+    <link rel="import" href="/css/carrousel.css">
+    
+    
+    
+    <title>fundacion</title>
+</head>
+<body class="body">
+    <header>
+        <div class="header-principal">
+            <div class="header-logo">
+                <div class="logo"></div>
+            </div>
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><a href="#principal"><span>Inicio</span></a></li>
+                        <li><a href="#sect_informacion"><span>conocenos</span></a></li>
+                        <li><a href="#container-history"><span>Historia</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="principal" id="principal">
+        <div class="fondo">
+
+        </div>
+    </section>
+
+
+    <!---este es el menu para navegar por los archivos de la seccion conocenos-->
+    <div class="menu-plegable-conocenos">        
+        <div class="menu">
+            <button  id="btn" class="btn-conocenos active"><li class="año1"><a href="#sect_informacion">quienes somos</a></li></button>
+            <button id="btn2" class="btn-conocenos"><li class="año"><a href="#sect_informacion">mision vision</a></li></button>
+            <button  id="btn" class="btn-conocenos"><li class="año1"><a href="#sect_informacion">historia</a></li></button>
+        </div>
+    
+    </div>
+    <!------------------------------------------------------------>
+
+    <section class="sec_informacion" id="sect_informacion">
+        <section id="#quienes_somos "  class="sect active" >
+            <div class="sect-quienes-somos" >
+                <div class="descripcion">
+                    <h1>¿QUIENES SOMOS?</h1>
+                    <P>Somos una organizacion no gubernamental sin animo de lucro creada por el pastor Pedro Ovidio Diaz Velazques..</P>
+                    <button class="btn btn-primary"  id="btn1">seguir-leyendo</button>
+                </div>
+                <div class="niños-logo">
+                    <div class="logo">
+                        <img src="/imagenes/logo-png/logo1.png" class="logo1" alt="">
+                        <img src="/imagenes/logo-png/logo2.png" class="logo2" alt="">
+                        <div>
+                            <img src="/imagenes/logo-png/logo3.png" class="logo3" alt="">
+                            <img src="/imagenes/logo-png/logo4.png" class="logo4" alt="">
+                        </div>
+                        <img src="/imagenes/logo-png/logo5.png" class="logo5" alt="">
+                        <img src="/imagenes/logo-png/logo6.png" class="logo6" alt="">
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        <section id="mision_vision sect" class="sect">
+            <div class="mision-vision"  >
+                <div class="mision">
+                    
+                    <div class="descripcion-mision">
+                        <h1>Mision</h1>
+                        <P>Ser un proyecto integral, rescatando los niños ya sus familias de las tinieblas y traerlos a la luz en Cristo Jesús, desarrollando responsabilidad, madurez e integridad personal para beneficio de su sociedad e iglesia.</P>
+                        <button class="btn btn-primary"  id="btn1">seguir-leyendo</button>
+                    </div>
+                </div>
+                <div class="vision">
+                    <div section class="descripcion-vision">
+                        <h1>Vision</h1>
+                        <P>Ser un proyecto integral, rescatando los niños ya sus familias de las tinieblas y traerlos a la luz en Cristo Jesús, desarrollando responsabilidad, madurez e integridad personal para beneficio de su sociedad e iglesia.</P>
+                        <button class="btn btn-primary"  id="btn1">seguir-leyendo</button>
+                    </div>
+                </div>  
+            </div>
+
+        </section>
+        <section id="historia sect"  class="sect">
+            <div class="carrusel_historia" >
+                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1mTK3LBQHIgdeI-Zruro7Mhdur8Iina_tHT_n24u1PVY&font=Default&lang=en&initial_zoom=2&height=750' width='100%' height='750' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+            </div>
+        </section>
+        
+
+    </section>
+
+    <div class="container-fotos" id="container-history">
+        <div class="menu-plegable">        
+            <div class="menu">
+                <button id="btn1" class="next" onclick="plusSlides(0)"><li class="año1"><a href="#1">2014</a></li></button>
+                <button id="btn2"><li class="año1"><a href="">2015</a></li></button>
+                <button  id="btn"><li class="año1"><a href="">2016</a></li></button>
+                <button id="btn"><li class="año1"><a href="">2017</a></li></button>
+                <button id="btn"><li class="año1"><a href="">2018</a></li></button>
+            </div>
+        
+        </div>
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="center-align titulo">Conoce nuestra historia</h1>
+                    <div class="carousel center-align" >
+                        <div class="carousel-item">
+                            <h2 class="subtitulo">Comienzos</h2>
+                            <div class="linea-division"></div>
+                            <p class="año">3</p>
+                            <img src="/imagenes/historia/esta.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <h2 class="subtitulo">Comienzo</h2>
+                            <div class="linea-division"></div>
+                            <p class="año">1</p>
+                            <img src="/imagenes/historia/descarga.jfif" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <h2 class="subtitulo">Comienzo</h2>
+                            <div class="linea-division"></div>
+                            <p class="año">2</p>
+                            <img src="/imagenes/historia/esta.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <h2 class="subtitulo">Comienzo</h2>
+                            <div class="linea-division"></div>
+                            <p class="año">5</p>
+                            <img src="/imagenes/historia/esta.jpeg" alt="">
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+    </div>
+
+   
+  
+    <section class="section-footer" id="footer">
+
+    </section>
+
+
+
+
+
+
+
+<!--------------------------------->
+    <!-----Jquery    js----------------> 
+    <script src="/js/plugin/jquery-3.6.0.min.js"></script>
+<!--------------------------------->
+
+<!--------------------------------->
+<!-----alert sweetalert2    js----> 
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/sweetAlert.js"></script>
+
+<!--------------------------------->
+<!-----main   js----> <!--------------------------------->
+    <script src="js/main.js"></script>
+<!--------------------------------->
+<!-----history js----> <!--------------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="js/carrousel.js"></script>
+
+
+<!--------------------------------->
+<!-----quitar divs----> <!--------------------------------->
+<script src="js/mediaquery.js"></script>
+<!--------------------------------->
+<!-----conocenos----> <!--------------------------------->
+<script src="js/sec_informacion.js"></script>
+
+
+
+</body>
+</html>

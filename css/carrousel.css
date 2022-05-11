@@ -1,0 +1,8 @@
+
+body .container .row .col .carousel .carousel-item .active{
+    z-index: 0;
+     opacity: 1; 
+     visibility: visible; 
+     transform: translateX(379px) translateY(0px) translateX(0px) translateX(0px) translateZ(0px);
+}
+

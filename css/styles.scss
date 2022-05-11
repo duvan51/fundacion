@@ -1,0 +1,985 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+@import url('/css/swal.css');
+/*****************************************************
+----------- colours  --------------------------------
+*****************************************************/
+$blanco:#fff;
+$blanco-transparente:rgba(255, 255, 255, 0.5);
+$base-color:#3398db;
+$base-color-red:#ff2d2b;
+$base-color-red-clar:#EE6E73;
+$base-color-blue:#184B8D;
+$base-color-green:#009734;
+$fondo-color-alerta:rgb(112, 102, 224);
+
+/*****************************************************
+----------- borders   --------------------------------
+*****************************************************/
+$border-basic : 1px solid black;
+
+/*****************************************************
+----------- letters  --------------------------------
+*****************************************************/
+$font-h1:'Mochiy Pop P One', sans-serif;
+
+
+/*****************************************************
+----------- section history --------------------------------
+****************************************************/
+$white-20: rgba(255, 255, 255, 0.2);
+$white-60: rgba(255, 255, 255, 0.6);
+$white: rgba(255, 255, 255, 1);
+$main-color: #b38c52;
+/*****************************************************/
+
+/*****************************************************
+----------- media----querys --------------------------------
+****************************************************/
+// variables:
+$breakpoint-xs: 508px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+
+
+@mixin media($media) {
+    @if $media == xs {
+      @media (max-width: $breakpoint-sm) { @content; }
+    }
+    @else if $media == sm {
+      @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+    }
+    @else if $media == md {
+      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
+    }
+    @else if $media == lg {
+      @media (min-width: $breakpoint-lg) { @content; }
+    }
+  }
+
+/*****************************************************/
+
+
+html{
+    width:100%;
+    scroll-behavior: smooth;
+
+
+body{  
+
+    background-color: $base-color; 
+    padding: 0px;
+    margin:0px;
+    
+
+    header{
+        position:fixed;
+        z-index:12 ;
+       // background:black;
+       // border:$border-basic;
+        width:100%; 
+
+        .header-principal{
+         //   border:$border-basic;
+            margin: 0px 8px;
+            display:flex;
+            align-items: center;
+            background: linear-gradient(29deg, rgba(51,152,219,0) 0%, rgba(51,152,219,0.06976557712928921) 0%, rgba(51, 152, 219,0.65729478785121473) 0%);
+
+
+            .header-logo{
+              //  border:$border-basic;
+                width:450px;
+                height:auto;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                padding:2px 0px;
+                
+
+                background: linear-gradient(29deg, rgba(18,0,15,0) 0%, rgba(11,11,11,0.41990563315169815) 0%, rgba(0,0,0,0.25729478785121473) 0%);
+
+                .logo{
+                    background:url('/imagenes/logo.png');
+                    width:110px;
+                    height:100px;
+                    background-size: cover;
+                    cursor:pointer;
+                    transition: all 1s;
+                    transform : scale(1);
+                }
+                .logo:hover{
+                    transform : scale(0.8);
+                    -webkit-transform-origin-x: 500px;
+                        transition: all 1s;
+                        
+                        border-radius:2%;
+
+
+                }
+            }
+            
+        }
+
+        .nav{
+           // border:$border-basic;
+            width:80%;
+            text-align: center;
+
+            nav{
+             border:$border-basic;
+              width:350px;
+              border-bottom-right-radius: 25%;            
+              border-top-right-radius: 25%;
+            
+              ul{
+                display: flex;
+                //text-align: center;
+                width: 85%;
+                justify-content:space-between;
+
+                li{
+                    width: 110px;
+                    height:60px;
+                    margin:0 5px;
+                   // border:$border-basic;
+                  //  background:;
+                    list-style:none;
+                    transform : scale(1);
+                    transition: all 1s;
+                    cursor:pointer;
+                    text-align: none;
+                    align-content: space-between;
+                    transform: rotate(-3.5deg);
+                      
+                    a{  
+                        
+                        font-family:$font-h1;
+                        text-decoration: none;
+                        color:#000000;
+                        position: relative;
+                        width:100%;
+                        height:100%;
+                       
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        span.text {
+                            width:100%;
+
+                        }
+                        
+                       
+                       
+                        
+
+                        
+                        
+                    
+                    }
+                }
+                li:hover{
+                        transform : scale(1.2);
+                        transition: all 1s;
+                        border:$border-basic;
+                        background:$base-color;
+                        border-radius:2%;
+                        height:70px;
+
+                        
+                        
+                        a{
+                            color:$base-color-red;
+                        }
+                        
+                     
+                }
+              }
+
+            }
+        }
+
+    }
+    .principal {
+        background:url(/imagenes/1_fondo.jpg)   top center / 200px 200px fixed padding-box content-box  ;
+        background-size: cover;
+        height:100vh;
+        width:100%;
+        -webkit-box-shadow: inset 0px -110px 51px -32px rgba(51,152,219,1);
+        -moz-box-shadow: inset 0px -110px 51px -32px rgba(51,152,219,1);
+        box-shadow: inset 0px -110px 51px -32px rgba(51,152,219,1);
+
+        @include media(xs) {
+            
+           
+            border:$border-basic;
+            
+    
+          }
+
+
+
+    }
+
+    /*este es el menu para nav la seccion conocenos*/
+    .menu-plegable-conocenos {
+        top:170px;
+        display: flex;
+        width:290px;
+        height: 55px;
+        border:$border-basic;
+        position:relative;
+        align-items: center;
+        z-index: 5;
+        left:40%;
+        @include media(xs) {
+            top:170px;
+            
+
+          }
+        
+
+
+
+        .menu{
+            display: flex;
+            align-items: center;
+
+            button{
+                
+                cursor:pointer;
+                background:$base-color-red-clar;
+                transform : scale(1);
+                transition: all 0.25s;
+                margin:0 8px;
+                border-radius: 25px;
+                width:80px; height:51px;
+                li{
+                    list-style:none;
+                    
+                    a{
+                        text-decoration: none;
+                        color:black;
+                        font-family:$font-h1;
+                        
+                    }
+                }
+
+            }
+            button:hover{
+                background:$base-color-red;
+                height:50px;
+                transition: all 0.25s;
+                
+
+            }
+            button.active{
+                background:$base-color-red;
+                height:50px;
+                transition: all 1s;
+
+            }
+
+        }
+
+    }
+   
+    /*section mision vision conocenos historia*/
+    section.sec_informacion{
+        width:100%;
+        position:relative;
+        height:110vh;
+        background:url(/imagenes/fondo2.png);
+        background-size: cover;
+        background-position-x: 20px;
+       // scroll-behavior: smooth;
+            section{
+                position:absolute;
+                display:none;
+                width:100%;
+                    .sect-quienes-somos{
+                        padding-top:70px;
+                        height:100vh;
+                        width:100%;
+                        display: flex;
+                        position:relative;
+                      
+                        @include media(xs) {
+                            display: flex;
+                            flex-direction: column;
+                            z-index: 2;
+                            height:130vh;
+                            
+                    
+                        }
+            
+            
+                        .descripcion{
+                            background:white;
+                            top:125px;
+                            margin-left:25px;
+                            position:relative;
+                        // border:$border-basic;
+                            display:flex;
+                            width:45%;
+                            height:45vh;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: flex-end;
+                            transform: rotate(-2.5deg);
+            
+            
+                /***************sombras************************/
+                            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                            @include media(xs) {
+                                display: flex;
+                                flex-direction: column;
+                                z-index: 2;
+                                width: 70%;
+                                height:30vh;
+                
+                            }
+            
+                            h1{
+                            position:relative;
+                            font-family:$font-h1;
+                            // border:$border-basic;
+                            width:100%;
+                            font-size: 3em;
+                            text-align:center;
+                            top:10px; 
+            
+                            }
+                            p{
+                            // border:$border-basic;
+                                font-family:$font-h1;
+                                font-size: 1.2em;
+                                text-align:center;
+                                @include media(xs) {
+                                    transform : scale(0);
+                            
+                                }
+                            
+            
+                                
+            
+                            }
+                            button{
+                                width:200px;
+                                letter-spacing:2px;
+                                height: 80px;
+                                cursor:pointer;
+                                position:relative;
+                                left:-25px;
+                                transform : scale(1);
+                                transition: all 1s;
+                                font-family:$font-h1;
+                                background:$base-color-green;
+                                color:black;
+                                border-radius:40px 10px;
+            
+                                @include media(xs) {
+                                    display: flex;
+                                    top:-90px;
+                                    left:-20%;
+                                
+                                }
+                            }
+                            button:hover{
+                                transform : scale(1.2);
+                                transition: all 1s;
+                                
+            
+                            }
+                        }
+                        .descripcion:hover{
+                            cursor:pointer;
+                            background:$base-color;
+                            color:white;
+                            transform: rotate(2.5deg);
+                            
+            
+                            button{
+                            background-color:$base-color-red;
+                            color:white;
+                            
+                            }
+            
+                        }
+            
+                        /*--------------------*/
+                            /*logo-niños*/
+                        /*--------------------*/
+                        .niños-logo{
+                            position:relative;
+                            top:105px;
+                            left:15%;
+                            background:url(/imagenes/niños-globos.png);
+                            background-size:cover;
+                            width:697px;
+                            height:770px;
+                            @include media(xs) {
+                                z-index: 1;
+                                background:url(/imagenes/niños-globos-logo.png) no-repeat;
+                                margin-left:-50px;
+                                background-size: cover;
+                                top: -200px;
+                                width:130%;
+                                transform : scale(0.5);
+                                
+                            
+            
+            
+                            }
+            
+                            .logo{
+                                top:380px;
+                                left:170px;
+                                position:relative;
+                                //border:$border-basic;
+                                width:55%;
+                                height:270px;
+                            // background-color: aliceblue;
+                                text-align: center;
+                                @include media(xs) {
+                                    transform : scale(0);
+                                    trasnslate: 2s;
+                                    
+                                }
+            
+                                img{
+                                    position:relative;
+                                    // width:;
+                                    // height; 
+                                
+                                } 
+                                .logo1{
+                                    position:relative;
+                                    width: 70%;
+                                    height: 27%;
+            
+                                } 
+                                
+                                .logo2{
+                                    position:relative;
+                                    transform: translate(-1.2px, -24.9px);
+                                    width: 45.1%;
+                                    height: 70px;
+            
+                                } 
+                                div{
+                                    position:relative;
+                                    top: -48px;
+                                    left: -1px;
+                                    padding:0 0;
+                                    display:flex;
+                                    justify-content: space-around;
+            
+                                
+            
+                                    .logo3{
+                                        position:relative;
+                                        width:20%;
+                                        height:65px;
+                                        top:-7px;
+                    
+                                    }
+                                    .logo4{
+                                        position:relative;
+                                        width:21%;
+                                        height:70px;
+                    
+                                    }
+                                }
+                                
+                                .logo5{
+                                    position:relative;
+                                    top: -99px;
+                                    width: 30%;
+                                    height:75px;
+            
+                                }
+                                .logo6{
+                                    top: -99px;
+                                    position:relative;
+                                    width:70%;
+                                    height:60px;
+            
+                                }      
+                            }
+                        }
+                    }
+                    .mision-vision{
+                        
+                        padding-top:70px;
+                        height:100vh;
+                        width:100%;
+                        background:url(/imagenes/fondo2-1.png);
+                        background-size: cover;
+                        background-position-x: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        align-content: flex-start;
+                        align-items: baseline;
+                        justify-content: space-between ;
+                       
+                        .mision{
+                            display: flex;
+                            align-content: flex-start;
+                            position:relative;
+                            z-index:2;
+                            @include media(xs) {
+                                top: -500px;
+                                position:relative;
+                
+                            }
+                            .descripcion-mision{
+                                background:white;
+                                top:125px;
+                                margin-left:25px;
+                                position:relative;
+                            // border:$border-basic;
+                                display:flex;
+                                width:45%;
+                                height:45vh;
+                                flex-direction: column;
+                                justify-content: space-evenly;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                transform: rotate(2.3deg);
+                    
+                    
+                    /***************sombras************************/
+                                -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                @include media(xs) {
+                                    display: flex;
+                                    flex-direction: column;
+                                    z-index: 2;
+                                    width: 70%;
+                                    height:30vh;
+                                    
+                    
+                                }
+                    
+                                h1{
+                                position:relative;
+                                font-family:$font-h1;
+                                // border:$border-basic;
+                                width:100%;
+                                font-size: 3em;
+                                text-align:center;
+                                top:10px;
+                                @include media(xs) {
+                                    top:28px;
+                    
+                                }
+                                
+                    
+                                }
+                                p{
+                                // border:$border-basic;
+                                    font-family:$font-h1;
+                                    font-size: 1.2em;
+                                    text-align:center;
+                                    @include media(xs) {
+                                        transform : scale(0);
+                                
+                                    }
+                                
+                                
+                    
+                                    
+                    
+                                }
+                                button{
+                                    width:200px;
+                                    letter-spacing:2px;
+                                    height: 80px;
+                                    cursor:pointer;
+                                    position:relative;
+                                    left:-25px;
+                                    transform : scale(1);
+                                    transition: all 1s;
+                                    font-family:$font-h1;
+                                    background:$base-color-green;
+                                    color:black;
+                                    border-radius:40px 10px;
+                                    @include media(xs) {
+                                        top: -110px;
+                                        left: -20%;
+                        
+                                    }
+                                
+                                }
+                                button:hover{
+                                    transform : scale(1.2);
+                                    transition: all 1s;
+                    
+                                }
+                            }
+                            .descripcion-mision:hover{
+                                cursor:pointer;
+                                background:$base-color;
+                                color:white;
+                                transform: rotate(-2.3deg);
+                                
+                    
+                                button{
+                                background-color:$base-color-red;
+                                color:white;
+                                
+                                }
+                    
+                            }
+            
+            
+                        }
+                        .vision{
+                            position:relative;
+                            top:-100px;
+                            left:-20px;
+                            justify-content: flex-end;
+                            display:flex;
+                            @include media(xs) {
+                                top: -700px;
+                                position:relative;
+                
+                            }
+                            
+                            .descripcion-vision{
+                                background:$blanco;
+                                top:12px;
+                                margin-left:25px;
+                                position:relative;
+                            // border:$border-basic;
+                                display:flex;
+                                width:45%;
+                                height:45vh;
+                                flex-direction: column;
+                                justify-content: space-evenly;
+                                align-items: flex-end;
+                                transform: rotate(-2.5deg);
+                    
+                    
+                    /***************sombras************************/
+                                -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                                @include media(xs) {
+                                    display: flex;
+                                    flex-direction: column;
+                                    z-index: 2;
+                                    width: 70%;
+                                    height:30vh;
+                    
+                                }
+                    
+                                h1{
+                                position:relative;
+                                font-family:$font-h1;
+                                // border:$border-basic;
+                                width:100%;
+                                font-size: 3em;
+                                text-align:center;
+                                top:10px;
+                                @include media(xs) {
+                                    top:28px;
+                    
+                                }
+                                
+                    
+                                }
+                                p{
+                                // border:$border-basic;
+                                    font-family:$font-h1;
+                                    font-size: 1.2em;
+                                    text-align:center;
+                                    @include media(xs) {
+                                        transform : scale(0);
+                                
+                                    }
+                                
+                                
+                    
+                                    
+                    
+                                }
+                                button{
+                                    width:200px;
+                                    letter-spacing:2px;
+                                    height: 80px;
+                                    cursor:pointer;
+                                    position:relative;
+                                    left:-25px;
+                                    transform : scale(1);
+                                    transition: all 1s;
+                                    font-family:$font-h1;
+                                    background:$base-color-green;
+                                    color:black;
+                                    border-radius:40px 10px;
+                                    @include media(xs) {
+                                        top: -110px;
+                                        left: -20%;
+                        
+                                    }
+                                }
+                                button:hover{
+                                    transform : scale(1.2);
+                                    transition: all 1s;
+                    
+                                }
+                            }
+                            .descripcion-vision:hover{
+                                cursor:pointer;
+                                background:$base-color;
+                                color:white;
+                                transform: rotate(2.5deg);
+                                
+                    
+                                button{
+                                background-color:$base-color-red;
+                                color:white;
+                                
+                                }
+                    
+                            }
+                    
+            
+                            
+                        }
+            
+                        
+                        
+            
+                    }
+                    .carrusel_historia{
+                        width:100%;
+                        padding-top:200px;
+                        background:black;
+                        -webkit-box-shadow: 0px -46px 59px 31px rgba(0,0,0,1);
+                        -moz-box-shadow: 0px -46px 59px 31px rgba(0,0,0,1);
+                        box-shadow: 0px -46px 59px 81px rgba(0,0,0,1)
+                        
+                    }
+                
+                   
+            }
+            section.active{
+                display:block;
+               
+            }
+            
+           
+
+        
+
+    }
+
+    /*fotos o hacer cualquier cosa con esto*/
+    .container-fotos{
+
+        padding-top:100px;
+        margin-top:50px;
+        @include media(xs) {
+            top: -800px;
+            position:relative;
+
+        }
+
+        .menu-plegable {
+            top:55px;
+            display: flex;
+            width:400px;
+            height: 55px;
+            border:$border-basic;
+            position:relative;
+            align-items: center;
+            z-index: 5;
+            @include media(xs) {
+                top:27px;
+    
+            }
+
+
+            .menu{
+                display: flex;
+                align-items: center;
+
+                button{
+                    
+                    cursor:pointer;
+                    background:$base-color-red-clar;
+                    transform : scale(1);
+                    transition: all 1s;
+                    margin:0 8px;
+                    border-radius: 25px;
+                    
+                    
+
+                    li{
+                        list-style:none;
+                        
+                        a{
+                            text-decoration: none;
+                            color:black;
+                            font-family:$font-h1;
+                            
+                        }
+                    }
+
+                }
+                button:hover{
+                    background:$base-color-red;
+                    height:50px;
+                    transition: all 1s;
+                    
+    
+                }
+                button.select{
+                    background:yellow;
+                    height:50px;
+                    transition: all 1s;
+
+                }
+
+            }
+
+        }
+        
+        
+
+        .row{
+            
+            
+            position: relative;
+            background-image:url('../imagenes/historia/fondo-historia.jpg');
+            background-repeat:no-repeat;;
+            background-size : cover;
+            @include media(xs) {
+                height:780px;
+                top:-25px;
+    
+            }
+            .col{
+                color: #000000;
+                
+                h1{
+                    color:#184B8D;
+                    font-family: $font-h1;
+                    @include media(xs) {
+                    padding-top:8px;
+                        font-size:2rem;
+            
+                    }
+
+                }
+                .carousel{
+                    min-height: 500px;
+                    height: 600px;
+                    margin-bottom:50px;
+                    
+
+                    
+
+                    .carousel-item{
+                        display:flex;
+                        color: $blanco;
+                        flex-direction:column;
+                        justify-content:center;
+                        align-items:center;
+                        user-select:none;
+                        width:500px;
+                        height:600px;
+                    
+                    
+
+                        .linea-division{
+
+                            border:3px solid white;
+                            width:25%;
+
+                        }
+    
+    
+                        img{
+                            width:100%;
+                            height:100%;
+                            object-fit: cover;
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            z-index: -1;
+                            border-radius:10px;
+                            
+                        }
+    
+    
+                    }
+                    .indicators{
+                        
+                        .indicator-item{
+                            width:20px;
+                            height:20px;
+                            background-color:$base-color-red-clar;
+                            transform:scale(1);
+                            transition:1s;
+                        }
+                        }
+                        .indicator-item:hover{
+                            background-color:white;
+                            transform:scale(1.2);
+                            transition:1s;
+                        }
+                        .active{
+                            background-color:$base-color-red;
+
+                        }
+                    
+                        
+                    }
+
+
+                }
+                
+                
+            }
+        
+        }
+
+    
+
+    }
+    
+
+
+    .section-footer {
+        width: 100%;
+        height: 200px;
+        background-color: $base-color-red;
+    }
+
+   
+    
+}
+@include media(xs) {
+    padding:0px 8px;
+    margin:0px;  
+  }
+
+
+@include media(xs) {
+    padding:0px;
+    margin:0px;
+   
+    
+    
+  }
+
+
+

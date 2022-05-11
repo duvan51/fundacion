@@ -1,0 +1,990 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+@import url("/css/swal.css");
+/*****************************************************
+----------- colours  --------------------------------
+*****************************************************/
+/*****************************************************
+----------- borders   --------------------------------
+*****************************************************/
+/*****************************************************
+----------- letters  --------------------------------
+*****************************************************/
+/*****************************************************
+----------- section history --------------------------------
+****************************************************/
+/*****************************************************/
+/*****************************************************
+----------- media----querys --------------------------------
+****************************************************/
+/*****************************************************/
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+html body {
+  background-color: #3398db;
+  padding: 0px;
+  margin: 0px;
+  /*este es el menu para nav la seccion conocenos*/
+  /*section mision vision conocenos historia*/
+  /*fotos o hacer cualquier cosa con esto*/
+}
+
+html body header {
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+}
+
+html body header .header-principal {
+  margin: 0px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(29deg, rgba(51, 152, 219, 0) 0%, rgba(51, 152, 219, 0.0697656) 0%, rgba(51, 152, 219, 0.657295) 0%);
+}
+
+html body header .header-principal .header-logo {
+  width: 450px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2px 0px;
+  background: linear-gradient(29deg, rgba(18, 0, 15, 0) 0%, rgba(11, 11, 11, 0.419906) 0%, rgba(0, 0, 0, 0.257295) 0%);
+}
+
+html body header .header-principal .header-logo .logo {
+  background: url("/imagenes/logo.png");
+  width: 110px;
+  height: 100px;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+html body header .header-principal .header-logo .logo:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin-x: 500px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-radius: 2%;
+}
+
+html body header .nav {
+  width: 80%;
+  text-align: center;
+}
+
+html body header .nav nav {
+  border: 1px solid black;
+  width: 350px;
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 25%;
+}
+
+html body header .nav nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body header .nav nav ul li {
+  width: 110px;
+  height: 60px;
+  margin: 0 5px;
+  list-style: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  cursor: pointer;
+  text-align: none;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-transform: rotate(-3.5deg);
+          transform: rotate(-3.5deg);
+}
+
+html body header .nav nav ul li a {
+  font-family: "Mochiy Pop P One", sans-serif;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body header .nav nav ul li a span.text {
+  width: 100%;
+}
+
+html body header .nav nav ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border: 1px solid black;
+  background: #3398db;
+  border-radius: 2%;
+  height: 70px;
+}
+
+html body header .nav nav ul li:hover a {
+  color: #ff2d2b;
+}
+
+html body .principal {
+  background: url(/imagenes/1_fondo.jpg) top center/200px 200px fixed padding-box content-box;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-shadow: inset 0px -110px 51px -32px #3398db;
+  box-shadow: inset 0px -110px 51px -32px #3398db;
+}
+
+@media (max-width: 767px) {
+  html body .principal {
+    border: 1px solid black;
+  }
+}
+
+html body .menu-plegable-conocenos {
+  top: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 290px;
+  height: 55px;
+  border: 1px solid black;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+  left: 40%;
+}
+
+@media (max-width: 767px) {
+  html body .menu-plegable-conocenos {
+    top: 170px;
+  }
+}
+
+html body .menu-plegable-conocenos .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .menu-plegable-conocenos .menu button {
+  cursor: pointer;
+  background: #EE6E73;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  margin: 0 8px;
+  border-radius: 25px;
+  width: 80px;
+  height: 51px;
+}
+
+html body .menu-plegable-conocenos .menu button li {
+  list-style: none;
+}
+
+html body .menu-plegable-conocenos .menu button li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+html body .menu-plegable-conocenos .menu button:hover {
+  background: #ff2d2b;
+  height: 50px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+html body .menu-plegable-conocenos .menu button.active {
+  background: #ff2d2b;
+  height: 50px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html body section.sec_informacion {
+  width: 100%;
+  position: relative;
+  height: 110vh;
+  background: url(/imagenes/fondo2.png);
+  background-size: cover;
+  background-position-x: 20px;
+}
+
+html body section.sec_informacion section {
+  position: absolute;
+  display: none;
+  width: 100%;
+}
+
+html body section.sec_informacion section .sect-quienes-somos {
+  padding-top: 70px;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  /*--------------------*/
+  /*logo-niños*/
+  /*--------------------*/
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .sect-quienes-somos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 2;
+    height: 130vh;
+  }
+}
+
+html body section.sec_informacion section .sect-quienes-somos .descripcion {
+  background: white;
+  top: 125px;
+  margin-left: 25px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 45%;
+  height: 45vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+  /***************sombras************************/
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .sect-quienes-somos .descripcion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 2;
+    width: 70%;
+    height: 30vh;
+  }
+}
+
+html body section.sec_informacion section .sect-quienes-somos .descripcion h1 {
+  position: relative;
+  font-family: "Mochiy Pop P One", sans-serif;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  top: 10px;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .descripcion p {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .sect-quienes-somos .descripcion p {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+html body section.sec_informacion section .sect-quienes-somos .descripcion button {
+  width: 200px;
+  letter-spacing: 2px;
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+  left: -25px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-family: "Mochiy Pop P One", sans-serif;
+  background: #009734;
+  color: black;
+  border-radius: 40px 10px;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .sect-quienes-somos .descripcion button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: -90px;
+    left: -20%;
+  }
+}
+
+html body section.sec_informacion section .sect-quienes-somos .descripcion button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .descripcion:hover {
+  cursor: pointer;
+  background: #3398db;
+  color: white;
+  -webkit-transform: rotate(2.5deg);
+          transform: rotate(2.5deg);
+}
+
+html body section.sec_informacion section .sect-quienes-somos .descripcion:hover button {
+  background-color: #ff2d2b;
+  color: white;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo {
+  position: relative;
+  top: 105px;
+  left: 15%;
+  background: url(/imagenes/niños-globos.png);
+  background-size: cover;
+  width: 697px;
+  height: 770px;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .sect-quienes-somos .niños-logo {
+    z-index: 1;
+    background: url(/imagenes/niños-globos-logo.png) no-repeat;
+    margin-left: -50px;
+    background-size: cover;
+    top: -200px;
+    width: 130%;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo {
+  top: 380px;
+  left: 170px;
+  position: relative;
+  width: 55%;
+  height: 270px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    trasnslate: 2s;
+  }
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo img {
+  position: relative;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo .logo1 {
+  position: relative;
+  width: 70%;
+  height: 27%;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo .logo2 {
+  position: relative;
+  -webkit-transform: translate(-1.2px, -24.9px);
+          transform: translate(-1.2px, -24.9px);
+  width: 45.1%;
+  height: 70px;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo div {
+  position: relative;
+  top: -48px;
+  left: -1px;
+  padding: 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo div .logo3 {
+  position: relative;
+  width: 20%;
+  height: 65px;
+  top: -7px;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo div .logo4 {
+  position: relative;
+  width: 21%;
+  height: 70px;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo .logo5 {
+  position: relative;
+  top: -99px;
+  width: 30%;
+  height: 75px;
+}
+
+html body section.sec_informacion section .sect-quienes-somos .niños-logo .logo .logo6 {
+  top: -99px;
+  position: relative;
+  width: 70%;
+  height: 60px;
+}
+
+html body section.sec_informacion section .mision-vision {
+  padding-top: 70px;
+  height: 100vh;
+  width: 100%;
+  background: url(/imagenes/fondo2-1.png);
+  background-size: cover;
+  background-position-x: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body section.sec_informacion section .mision-vision .mision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .mision {
+    top: -500px;
+    position: relative;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .mision .descripcion-mision {
+  background: white;
+  top: 125px;
+  margin-left: 25px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 45%;
+  height: 45vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  flex-direction: column;
+  -webkit-transform: rotate(2.3deg);
+          transform: rotate(2.3deg);
+  /***************sombras************************/
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .mision .descripcion-mision {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 2;
+    width: 70%;
+    height: 30vh;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .mision .descripcion-mision h1 {
+  position: relative;
+  font-family: "Mochiy Pop P One", sans-serif;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  top: 10px;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .mision .descripcion-mision h1 {
+    top: 28px;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .mision .descripcion-mision p {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .mision .descripcion-mision p {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+html body section.sec_informacion section .mision-vision .mision .descripcion-mision button {
+  width: 200px;
+  letter-spacing: 2px;
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+  left: -25px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-family: "Mochiy Pop P One", sans-serif;
+  background: #009734;
+  color: black;
+  border-radius: 40px 10px;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .mision .descripcion-mision button {
+    top: -110px;
+    left: -20%;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .mision .descripcion-mision button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html body section.sec_informacion section .mision-vision .mision .descripcion-mision:hover {
+  cursor: pointer;
+  background: #3398db;
+  color: white;
+  -webkit-transform: rotate(-2.3deg);
+          transform: rotate(-2.3deg);
+}
+
+html body section.sec_informacion section .mision-vision .mision .descripcion-mision:hover button {
+  background-color: #ff2d2b;
+  color: white;
+}
+
+html body section.sec_informacion section .mision-vision .vision {
+  position: relative;
+  top: -100px;
+  left: -20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .vision {
+    top: -700px;
+    position: relative;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .vision .descripcion-vision {
+  background: #fff;
+  top: 12px;
+  margin-left: 25px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 45%;
+  height: 45vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform: rotate(-2.5deg);
+          transform: rotate(-2.5deg);
+  /***************sombras************************/
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .vision .descripcion-vision {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 2;
+    width: 70%;
+    height: 30vh;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .vision .descripcion-vision h1 {
+  position: relative;
+  font-family: "Mochiy Pop P One", sans-serif;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  top: 10px;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .vision .descripcion-vision h1 {
+    top: 28px;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .vision .descripcion-vision p {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .vision .descripcion-vision p {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+html body section.sec_informacion section .mision-vision .vision .descripcion-vision button {
+  width: 200px;
+  letter-spacing: 2px;
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+  left: -25px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-family: "Mochiy Pop P One", sans-serif;
+  background: #009734;
+  color: black;
+  border-radius: 40px 10px;
+}
+
+@media (max-width: 767px) {
+  html body section.sec_informacion section .mision-vision .vision .descripcion-vision button {
+    top: -110px;
+    left: -20%;
+  }
+}
+
+html body section.sec_informacion section .mision-vision .vision .descripcion-vision button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html body section.sec_informacion section .mision-vision .vision .descripcion-vision:hover {
+  cursor: pointer;
+  background: #3398db;
+  color: white;
+  -webkit-transform: rotate(2.5deg);
+          transform: rotate(2.5deg);
+}
+
+html body section.sec_informacion section .mision-vision .vision .descripcion-vision:hover button {
+  background-color: #ff2d2b;
+  color: white;
+}
+
+html body section.sec_informacion section .carrusel_historia {
+  width: 100%;
+  padding-top: 200px;
+  background: black;
+  -webkit-box-shadow: 0px -46px 59px 31px black;
+  box-shadow: 0px -46px 59px 81px black;
+}
+
+html body section.sec_informacion section.active {
+  display: block;
+}
+
+html body .container-fotos {
+  padding-top: 100px;
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  html body .container-fotos {
+    top: -800px;
+    position: relative;
+  }
+}
+
+html body .container-fotos .menu-plegable {
+  top: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  height: 55px;
+  border: 1px solid black;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+}
+
+@media (max-width: 767px) {
+  html body .container-fotos .menu-plegable {
+    top: 27px;
+  }
+}
+
+html body .container-fotos .menu-plegable .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .container-fotos .menu-plegable .menu button {
+  cursor: pointer;
+  background: #EE6E73;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin: 0 8px;
+  border-radius: 25px;
+}
+
+html body .container-fotos .menu-plegable .menu button li {
+  list-style: none;
+}
+
+html body .container-fotos .menu-plegable .menu button li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+html body .container-fotos .menu-plegable .menu button:hover {
+  background: #ff2d2b;
+  height: 50px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html body .container-fotos .menu-plegable .menu button.select {
+  background: yellow;
+  height: 50px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html body .container-fotos .row {
+  position: relative;
+  background-image: url("../imagenes/historia/fondo-historia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  html body .container-fotos .row {
+    height: 780px;
+    top: -25px;
+  }
+}
+
+html body .container-fotos .row .col {
+  color: #000000;
+}
+
+html body .container-fotos .row .col h1 {
+  color: #184B8D;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+@media (max-width: 767px) {
+  html body .container-fotos .row .col h1 {
+    padding-top: 8px;
+    font-size: 2rem;
+  }
+}
+
+html body .container-fotos .row .col .carousel {
+  min-height: 500px;
+  height: 600px;
+  margin-bottom: 50px;
+}
+
+html body .container-fotos .row .col .carousel .carousel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 500px;
+  height: 600px;
+}
+
+html body .container-fotos .row .col .carousel .carousel-item .linea-division {
+  border: 3px solid white;
+  width: 25%;
+}
+
+html body .container-fotos .row .col .carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+html body .container-fotos .row .col .carousel .indicators .indicator-item {
+  width: 20px;
+  height: 20px;
+  background-color: #EE6E73;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html body .container-fotos .row .col .carousel .indicator-item:hover {
+  background-color: white;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html body .container-fotos .row .col .carousel .active {
+  background-color: #ff2d2b;
+}
+
+html .section-footer {
+  width: 100%;
+  height: 200px;
+  background-color: #ff2d2b;
+}
+
+@media (max-width: 767px) {
+  padding: 0px 8px;
+  margin: 0px;
+}
+
+@media (max-width: 767px) {
+  padding: 0px;
+  margin: 0px;
+}
+/*# sourceMappingURL=styles.css.map */
